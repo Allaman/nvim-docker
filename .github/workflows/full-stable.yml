@@ -27,7 +27,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v4
         with:
-          file: ./base/Dockerfile
+          file: ./full/Dockerfile
           build-args: BASE_IMAGE=nvim-base:stable
           push: true
           platforms: linux/amd64,linux/arm64
