@@ -5,6 +5,7 @@ FROM ${ARCH}${BASE_IMAGE}
 ARG TARGETOS
 ARG TARGETARCH
 
+# hadolint ignore=DL3004
 RUN sudo apt-get update \
 && sudo apt-get install --no-install-recommends -y \
   build-essential \
