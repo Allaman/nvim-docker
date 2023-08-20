@@ -1,0 +1,47 @@
+version: "3"
+
+tasks:
+  build-image:
+    internal: true
+    cmds:
+      - docker build --build-arg BRANCH={{.BRANCH}} -t nvim-base .
+
+  docker-login:
+    internal: true
+    cmds:
+      - echo -n {{.PASS}} | docker login -u {{.USER}} --password-stdin docker.io
+    requires:
+      vars: [PASS, USER]
+
+  push-image:
+    internal: true
+    cmds:
+      - task: docker-login
+      - docker image tag {{.IMAGE_NAME}}:{{.IMAGE_TAG}} {{REPO_USER}}/{{.IMAGE_NAME}}:{{.IMAGE_TAG}}
+      - docker image push {{REPO_USER}}/{{.IMAGE_NAME}}:{{.IMAGE_TAG}}
+    requires:
+      vars: [IMAGE_NAME, IMAGE_TAG, REPO_USER]
+
+  build-stable:
+    desc: Build Docker image with Neovim stable
+    cmds:
+      - task: build-image
+        vars:
+          BRANCH: stable
+
+  push-stable:
+    desc: Push Docker image with Neovim stable
+    deps:
+      - build-stable
+    cmds:
+      - task: push-image
+        var:
+          IMAGE_NAME: allaman/nvim-base
+          IMAGE_TAG: stable
+
+  build-head:
+    desc: Build Docker image with Neovim HEAD
+    cmds:
+      - task: build-image
+        vars:
+          BRANCH: master
