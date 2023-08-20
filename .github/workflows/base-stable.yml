@@ -1,4 +1,4 @@
-name: base_stable
+name: base-stable
 
 on:
   push:
@@ -8,7 +8,8 @@ on:
     workflows: [hadolint]
     types: [completed]
 
-  base_stable:
+jobs:
+  base-stable:
     runs-on: ubuntu-latest
     needs: hadolint
     # Only run when hadolint succeeded
