@@ -5,11 +5,7 @@ on:
     branches:
       - "main"
 
-name: Lint
-on: pull_request
-
 jobs:
-
   hadolint:
     runs-on: ubuntu-22.04
     name: Hadolint
