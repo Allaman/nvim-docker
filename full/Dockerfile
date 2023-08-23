@@ -5,7 +5,7 @@ FROM ${ARCH}${BASE_IMAGE}
 ARG TARGETOS
 ARG TARGETARCH
 
-# hadolint ignore=DL3004
+# Install opionionated tools
 RUN apt-get update \
 && apt-get install --no-install-recommends -y \
   build-essential \
@@ -33,7 +33,6 @@ RUN apt-get update \
 ENV PATH=$PATH:/usr/local/bin/go/bin/
 ENV GOPATH=/home/nvim/.local/share/go
 ENV PATH=$PATH:$GOPATH/bin
-
 
 # Add user 'nvim' and allow passwordless sudo
 RUN adduser --disabled-password --gecos '' nvim \
