@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - "main"
+    paths:
+      - "./full/Dockerfile"
   workflow_run:
     workflows: [base-stable]
     types: [completed]

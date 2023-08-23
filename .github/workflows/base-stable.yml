@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - "main"
+    paths:
+      - "./base/Dockerfile"
   workflow_run:
     workflows: [hadolint]
     types: [completed]
