@@ -10,10 +10,10 @@ A repo containing the source for my Neovim Docker images
 - [Base](./base) - a minimal Neovim built form source on Debian (~ **70 MB** uncompressed -> [Dockerhub](https://hub.docker.com/repository/docker/allaman/nvim-base/general))
 - [Full](.full) - opinionated image for my [Neovim config](https://github.com/Allaman/nvim/) (~ **1 GB** uncompressed -> [Dockerhub](https://hub.docker.com/repository/docker/allaman/nvim-full/general))
 
-Each of the flavor is built with 
+Each of the flavor is built for
 
 - **stable** and **HEAD** Neovim
-- for **linux/amd64** and **linux/arm64** (no virtualization for Docker Desktop on Apple Silicone required)
+- **linux/amd64** and **linux/arm64** (no virtualization for Docker Desktop on Apple Silicone required)
 
 ## Usage
 
