@@ -33,6 +33,6 @@ docker run -it --name nvim --rm --entrypoint /bin/bash nvim-base:stable
 docker run -it --name nvim --rm --mount type=bind,source="$(pwd)",target=/home/nvim/wd nvim-full:stable
 ```
 
-### Build locally
+### Local Building
 
 The provided [Taskfile](./Taskfile.yml) ([Task](https://taskfile.dev/) is required) allows you to conveniently build the images locally. Just run `task` to get an overview.
