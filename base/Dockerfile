@@ -33,7 +33,8 @@ ENV LC_ALL=en_US.UTF-8
 RUN apt-get update \
 && apt-get install --no-install-recommends -y \
 locales \
-&& sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && dpkg-reconfigure --frontend=noninteractive locales
+&& sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && dpkg-reconfigure --frontend=noninteractive locales \
+&& rm -rf /var/lib/apt/lists/*
 
 # Copy Neovim from builder image
 RUN mkdir -p /usr/local/share/nvim
