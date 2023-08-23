@@ -1,0 +1,70 @@
+version: "3"
+
+includes:
+  base:
+    taskfile: ./base/Taskfile.yml
+    dir: ./base
+  full:
+    taskfile: ./full/Taskfile.yml
+    dir: ./full
+
+tasks:
+  default:
+    cmds:
+      - task -l
+    silent: true
+
+  run:
+    internal: true
+    cmds:
+      - docker run -it --name nvim --entrypoint /bin/bash --rm {{.IMAGE}}
+    requires:
+      vars: [IMAGE]
+
+  stable:
+    desc: Build stable images
+    cmds:
+      - task: base:stable
+      - task: full:stable
+
+  latest:
+    desc: Build latest images
+    cmds:
+      - task: base:latest
+      - task: full:latest
+
+  run-base-stable:
+    desc: Run base stable
+    aliases:
+      - rbs
+    cmds:
+      - task: run
+        vars:
+          IMAGE: nvim-base:stable
+
+  run-base-latest:
+    desc: Run base latest
+    aliases:
+      - rbl
+    cmds:
+      - task: run
+        vars:
+          IMAGE: nvim-base:latest
+
+  run-full-stable:
+    desc: Run full stable
+    aliases:
+      - rfs
+    cmds:
+      - task: run
+        vars:
+          IMAGE: nvim-full:stable
+
+  run-full-latest:
+    desc: Run full latest
+    aliases:
+      - rfl
+    cmds:
+      - task: run
+        vars:
+          IMAGE: nvim-full:latest

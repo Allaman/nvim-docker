@@ -4,20 +4,20 @@ tasks:
   build:
     internal: true
     cmds:
-      - docker build --build-arg BRANCH={{.BRANCH}} -t nvim-base:{{.TAG}} .
+      - docker build --build-arg BASE_IMAGE={{.BASE_IMAGE}} -t nvim-full:{{.TAG}} .
     requires:
-      vars: [BRANCH, TAG]
+      vars: [BASE_IMAGE, TAG]
 
   stable:
     cmds:
       - task: build
         vars:
-          BRANCH: stable
+          BASE_IMAGE: nvim-base:stable
           TAG: stable
 
   latest:
     cmds:
       - task: build
         vars:
-          BRANCH: master
+          BASE_IMAGE: nvim-base:latest
           TAG: latest
