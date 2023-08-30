@@ -36,7 +36,7 @@ ENV PATH=$PATH:$GOPATH/bin
 
 # Add user 'nvim' and allow passwordless sudo
 RUN adduser --disabled-password --gecos '' nvim \
-&& echo '%ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+&& echo 'nvim ALL=(ALL:ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 # switch to the unpriviledged user
 USER nvim
