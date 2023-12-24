@@ -12,8 +12,8 @@ tasks:
     cmds:
       - task: build
         vars:
-          BRANCH: stable
-          TAG: stable
+          BRANCH: release-0.9
+          TAG: release-0.9
 
   latest:
     cmds:
