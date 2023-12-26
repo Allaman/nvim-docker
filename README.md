@@ -7,7 +7,7 @@
 
 A repo containing the source for my Neovim Docker images
 
-- [Base](./base) - a minimal Neovim built form source on Debian (~ **70 MB** uncompressed -> [Dockerhub](https://hub.docker.com/r/allaman/nvim-base))
+- [Base](./base) - a minimal Neovim built from source on Debian (~ **70 MB** uncompressed -> [Dockerhub](https://hub.docker.com/r/allaman/nvim-base))
 - [Full](.full) - opinionated image for my [Neovim config](https://github.com/Allaman/nvim/) (~ **1 GB** uncompressed -> [Dockerhub](https://hub.docker.com/r/allaman/nvim-full))
 
 Each of the flavor is built for
@@ -23,7 +23,7 @@ Use in your own Dockerfile as usual:
 
 ```Dockerfile
 ARG ARCH
-FROM ${ARCH}nvim-base:stable
+FROM ${ARCH}allaman/nvim-base:stable
 ```
 
 ### As dockerized Neovim

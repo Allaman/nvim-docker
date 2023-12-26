@@ -1,6 +1,6 @@
 # nvim-full
 
-Docker image base up [nvim-base](../base/) with tools specific for my [config](https://github.com/Allaman/nvim/) and use case.
+Docker image based up [nvim-base](../base/) with tools specific for my Neovim [config](https://github.com/Allaman/nvim/) and use case.
 
 Features:
 
