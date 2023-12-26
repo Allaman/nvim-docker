@@ -3,9 +3,6 @@ name: base-latest
 on:
   schedule:
     - cron: "0 6 * * */1"
-  push:
-    branches:
-      - "main"
   workflow_run:
     workflows: [hadolint]
     types: [completed]
