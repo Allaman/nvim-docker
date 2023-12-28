@@ -1,11 +1,8 @@
 name: hadolint
 
 on:
-  push:
-    branches:
-      - "main"
-    paths:
-      - "**/Dockerfile"
+  schedule:
+    - cron: "0 6 * * */1"
 
 jobs:
   hadolint:
