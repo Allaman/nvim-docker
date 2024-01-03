@@ -1,6 +1,7 @@
 <h1 align="center">Nvim-Docker</h1>
 
-<div align="center"><p>
+<div align="center">
+    <p>
     <a href="https://github.com/Allaman/nvim-docker/actions/workflows/base-latest.yml">
       <img src="https://github.com/Allaman/nvim-docker/actions/workflows/base-latest.yml/badge.svg" alt="base-latest"/>
     </a>
@@ -16,7 +17,8 @@
     <a href="https://github.com/Allaman/nvim/blob/main/LICENSE">
       <img src="https://img.shields.io/github/license/Allaman/nvim-docker?style=flat-square&logo=MIT&label=License" alt="License"/>
     </a>
-</p>
+    </p>
+</div>
 
 A repo containing the source for my Neovim Docker images
 
