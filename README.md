@@ -1,14 +1,22 @@
 <h1 align="center">Nvim-Docker</h1>
 
-
-<div align="center">
-  <p>
-[![base-latest](https://github.com/Allaman/nvim-docker/actions/workflows/base-latest.yml/badge.svg)](https://github.com/Allaman/nvim-docker/actions/workflows/base-latest.yml)
-[![base-stable](https://github.com/Allaman/nvim-docker/actions/workflows/base-stable.yml/badge.svg)](https://github.com/Allaman/nvim-docker/actions/workflows/base-stable.yml)
-[![full-latest](https://github.com/Allaman/nvim-docker/actions/workflows/full-latest.yml/badge.svg)](https://github.com/Allaman/nvim-docker/actions/workflows/full-latest.yml)
-[![full-stable](https://github.com/Allaman/nvim-docker/actions/workflows/full-stable.yml/badge.svg)](https://github.com/Allaman/nvim-docker/actions/workflows/full-stable.yml)
-  </p>
-</div>
+<div align="center"><p>
+    <a href="https://github.com/Allaman/nvim-docker/actions/workflows/base-latest.yml">
+      <img src="https://github.com/Allaman/nvim-docker/actions/workflows/base-latest.yml/badge.svg" alt="base-latest"/>
+    </a>
+    <a href="https://github.com/Allaman/nvim-docker/actions/workflows/base-stable.yml">
+      <img src="https://github.com/Allaman/nvim-docker/actions/workflows/base-stable.yml/badge.svg" alt="base-stable"/>
+    </a>
+    <a href="https://github.com/Allaman/nvim-docker/actions/workflows/full-latest.yml">
+      <img src="https://github.com/Allaman/nvim-docker/actions/workflows/full-latest.yml/badge.svg" alt="full-latest"/>
+    </a>
+    <a href="https://github.com/Allaman/nvim-docker/actions/workflows/full-stable.yml">
+      <img src="https://github.com/Allaman/nvim-docker/actions/workflows/full-stable.yml/badge.svg" alt="full-stable"/>
+    </a>
+    <a href="https://github.com/Allaman/nvim/blob/main/LICENSE">
+      <img src="https://img.shields.io/github/license/Allaman/nvim-docker?style=flat-square&logo=MIT&label=License" alt="License"/>
+    </a>
+</p>
 
 A repo containing the source for my Neovim Docker images
 
