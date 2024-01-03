@@ -1,9 +1,14 @@
-# NVIM-DOCKER
+<h1 align="center">Nvim-Docker</h1>
 
+
+<div align="center">
+  <p>
 [![base-latest](https://github.com/Allaman/nvim-docker/actions/workflows/base-latest.yml/badge.svg)](https://github.com/Allaman/nvim-docker/actions/workflows/base-latest.yml)
 [![base-stable](https://github.com/Allaman/nvim-docker/actions/workflows/base-stable.yml/badge.svg)](https://github.com/Allaman/nvim-docker/actions/workflows/base-stable.yml)
 [![full-latest](https://github.com/Allaman/nvim-docker/actions/workflows/full-latest.yml/badge.svg)](https://github.com/Allaman/nvim-docker/actions/workflows/full-latest.yml)
 [![full-stable](https://github.com/Allaman/nvim-docker/actions/workflows/full-stable.yml/badge.svg)](https://github.com/Allaman/nvim-docker/actions/workflows/full-stable.yml)
+  </p>
+</div>
 
 A repo containing the source for my Neovim Docker images
 
