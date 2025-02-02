@@ -1,3 +1,4 @@
+---
 version: "3"
 
 tasks:
@@ -12,8 +13,8 @@ tasks:
     cmds:
       - task: build
         vars:
-          BRANCH: release-0.9
-          TAG: release-0.9
+          BRANCH: release-0.10
+          TAG: release-0.10
 
   latest:
     cmds:
