@@ -1,5 +1,5 @@
 ARG ARCH
-FROM ${ARCH}debian:stable-slim as builder
+FROM ${ARCH}debian:stable-slim AS builder
 
 ARG TARGETOS
 ARG TARGETARCH
@@ -21,7 +21,7 @@ RUN apt-get update \
 && rm -rf /var/lib/apt/lists/* \
 && git clone -b ${BRANCH} https://github.com/neovim/neovim /tmp/neovim \
 && cd /tmp/neovim \
-&& make CMAKE_BUILD_TYPE=RelWithDebInfo && make install && rm -fr /tmp/neovim
+&& make CMAKE_BUILD_TYPE=Release && make install && rm -fr /tmp/neovim
 
 FROM ${ARCH}debian:stable-slim
 
