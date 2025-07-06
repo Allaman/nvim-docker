@@ -1,3 +1,4 @@
+---
 name: base-stable
 
 on:
@@ -30,7 +31,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           file: ./base/Dockerfile
-          build-args: BRANCH=release-0.9
+          build-args: BRANCH=stable
           push: true
           platforms: linux/amd64,linux/arm64
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/nvim-base:stable
