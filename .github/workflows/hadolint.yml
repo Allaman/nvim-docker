@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-22.04
     name: Hadolint
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: jbergstroem/hadolint-gh-action@v1
         with:
           dockerfile: "**/Dockerfile"
